@@ -17,7 +17,7 @@ list_1 = [randint(1, 10) for i in range(n)]
 print(list_1)
 
 max = list_1[0]
-diff = abs(list_1[0] - x)
+diff = abs(list_1[0] - x) 
 for i in range(1, n):
     if abs(list_1[i] - x) < diff and list_1[i] != x:
         max = list_1[i]

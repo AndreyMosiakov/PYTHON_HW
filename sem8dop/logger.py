@@ -19,27 +19,27 @@ def input_data():
         print('не верно')
         var = (input(' введите номер варианта: '))
     if var == '1':
-        with open('phonebook.txt', 'a', encoding='utf-8') as file:
+        with open('sem8dop\phonebook.txt', 'a', encoding='utf-8') as file:
             file.write(f'{name}\n{lastname}\n{phone}\n{adress}\n\n') 
     else:
-          with open('phonebook.txt', 'a', encoding='utf-8') as file:
-            file.write(f'{name} ; {lastname} ; {phone} ; {adress}\n\n')
+          with open('sem8dop\phonebook.txt', 'a', encoding='utf-8') as file:
+            file.write(f'{name} ; {lastname} ; {phone} ; {adress} '+ '\n')
 
 def print_data():
-    with open('phonebook.txt', 'r', encoding='utf-8') as data:
-        phonebook = data.read()
+    with open('sem8dop\phonebook.txt', 'r', encoding='utf-8') as file:
+        phonebook = file.read()
         print(phonebook)
         return phonebook        
 
 def delete_line(name):
-    with open('phonebook.txt', "w", encoding="utf8" ) as file:
+    with open('sem8dop\phonebook.txt', "w", encoding="utf8" ) as file:
         persons = file.read()
         for person in persons:
             if name != person:
                 file.write(person)
 
 def change_person(new_name, old_name):
-     with open('phonebook.txt', "w", encoding="utf8" ) as file:
+     with open('sem8dop\phonebook.txt', "w", encoding="utf8" ) as file:
         persons = file.read()
         for person in persons:
             if  old_name != person:
@@ -48,8 +48,5 @@ def change_person(new_name, old_name):
                 file.write(new_name + "\n")
               
 
-
-
-
-input_data()
-print_data()        
+#input_data()
+#print_data()        
